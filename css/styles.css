@@ -415,6 +415,7 @@ a{
     margin-top: 40px;
 }
 .btn-details{
+    text-decoration: none;
     background-color: #2ec4b6;
     margin: 5px 0px 25px 0px;
     padding: 10px 15px;
@@ -423,12 +424,14 @@ a{
     color: #fff;
 }
 .btn-details:hover{
+    text-decoration: none;
+    color: #fff;
     transform: translateY(-5px);
 }
-.detail-icon{
-}
+
 .detail-icon ul li{
-    margin: 0px 5px;
+    /* border: 1px solid red; */
+    margin: 15px 5px;
     padding: 7px;
 }
 .detail-icon ul li:first-child{

@@ -12,8 +12,6 @@ $(document).ready(function () {
             var mainHeight = $('.main').height();
 
             var total = (position / (mainHeight - windowHeight)) * 100;
-            // console.log("Total Scroll: "+ total);
-
             $('.progress').css("width", total + "%");
         })
     }
@@ -49,7 +47,6 @@ $(document).ready(function () {
 
     function typing() {
         var text = txtArr[currentChar].substring(0, currentSentChar + 1);
-        // console.log(text);
         $('.typing').text(text);
         currentSentChar++;
 
@@ -63,7 +60,6 @@ $(document).ready(function () {
 
     function deleting() {
         var text = txtArr[currentChar].substring(0, currentSentChar - 1);
-        // console.log(text);
         $('.typing').text(text);
         currentSentChar--;
 
@@ -87,12 +83,6 @@ $(document).ready(function () {
     interval = setInterval(typing, 130)
 
     $(window).scroll(function () {
-        if ($(window).scrollTop() >= 0) {
-            // $('.nav-a').eq(0).addClass('active');
-        }
-    })
-
-    $(window).scroll(function () {
         let position = $(window).scrollTop();
         if (position >= 250) {
             $('.about-content').addClass('bounceRight');
@@ -100,25 +90,21 @@ $(document).ready(function () {
             var windowHeight = $(window).height();
             var imgHeight = $('.about-img').height();
             var imgScroll = ((position / (windowHeight - imgHeight)) / 10);
-            // console.log(imgScroll);
             $('.abt-img').css("transform", 'translateY(' + imgScroll + '%' + ')')
         }
         else {
             $('.nav-menu').removeClass('customNav');
-            // $('.nav-a').eq(0).removeClass('active');
         }
     })
 
     $(window).scroll(function () {
         if ($(window).scrollTop() >= 1300) {
-            // console.log('scrolled');
             $('.work').addClass('bounceUp');
         }
     })
 
     $(window).scroll(function () {
         if ($(window).scrollTop() >= 1400) {
-            // console.log('scrolled');
             $('.work-single').addClass('bounceRight');
         }
     })
@@ -131,20 +117,6 @@ $(document).ready(function () {
     $(window).scroll(function () {
         if ($(window).scrollTop() >= 1950) {
             $('.skill-single').addClass('bounceRight');
-            var skillLength = document.querySelectorAll('.skill-length');
-            // console.log(skillLength);
-
-
-            skillLength.forEach((skill) => {
-                // console.log(skill);
-
-                setInterval(function () {
-                    skill.classList.add('activeAnim');
-                }, 3000)
-            })
-        }
-        else {
-            // $('.nav-a').eq(1).removeClass('active')
         }
     });
 
@@ -163,11 +135,7 @@ $(document).ready(function () {
             var windowHeight = $(window).height();
             var imgHeight = $('.image').height();
             var imgScroll = ((position / (windowHeight - imgHeight)) - 6);
-            // console.log(imgScroll)
             $('.image img').css("transform", 'translateY(' + imgScroll + '%' + ')');
-        }
-        else {
-            // $('.nav-a').eq(2).removeClass('active')  
         }
     })
 
